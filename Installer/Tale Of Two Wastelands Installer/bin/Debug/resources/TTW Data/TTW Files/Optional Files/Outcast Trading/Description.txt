@@ -1,0 +1,4 @@
+Instead of using the dialog menu, outcasts instead use a barter menu, giving you fair prices for tech and offering loads of low tech supplies for purchase, such as ballistic ammo and weapons, food, water, and stimpacks.
+As your reputation with them increases, they offer better stuff for sale and will eventually sell you small amounts of energy weapons and ammo.
+
+Will be integrated into TTW, but is currently being tested.

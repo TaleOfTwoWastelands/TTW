@@ -1,0 +1,23 @@
+For balance reasons, the collectible Bobbleheads now give minor perk-like bonuses.
+				
+	Strength: You may carry 25 more pounds of gear.
+	Perception: You are 15% more accurate in VATS.
+	Endurance: Your DT increases by 5.
+	Charisma: The attack speed of your followers is increased by 10%.
+	Intelligence: Each level up you gain 1 extra skill point.
+	Agility: Your AP regenerates 10% faster.
+	Luck: Each point of Luck gives you an additional 1% chance to Critically Hit.
+	Barter: Barter prices are 15% cheaper.
+	Energy Weapons: Energy weapons you use punch through an additional 5 DT.
+	Explosives: Using Explosives in VATS costs 15% less AP.
+	Guns: Your accuracy with guns is increased by 10%.
+	Lockpick: Your lockpick skill increases by 10%.
+	Medicine: You are 25% less likely to become addicted to chems.
+	Melee Weapons: You attack 20% faster when using Melee Weapons.
+	Repair: Your equipment degrades 25% slower.
+	Science: You deal 20% more damage to robots.
+	Sneak: Your sneak attack criticals deal 50% more damage.
+	Speech: Your speech skill increases by 10%.
+	Survival: Your movement speed increases by 10%.
+	Unarmed: When fighting bare handed in VATS you use 50% less AP.
+	
