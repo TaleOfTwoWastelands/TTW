@@ -1,0 +1,10 @@
+sound\fx\drs\drs_pittentrance_close.wav
+sound\fx\drs\drs_pittentrance_open.wav
+sound\fx\obj\generator\obj_generator_02_lp.wav
+sound\fx\obj\obj_steelpress_backward.wav
+sound\fx\obj\obj_steelpress_conveyor_a.wav
+sound\fx\obj\obj_steelpress_conveyor_b.wav
+sound\fx\obj\obj_steelpress_forward.wav
+sound\fx\wpn\autoaxe\wpn_autoaxe_fire_lpm.wav
+sound\fx\wpn\rifleassaultsilenced\wpn_rifleassaultsilenced_fire_2d.wav
+sound\fx\wpn\rifleassaultsilenced\wpn_rifleassaultsilenced_fire_3d.wav
