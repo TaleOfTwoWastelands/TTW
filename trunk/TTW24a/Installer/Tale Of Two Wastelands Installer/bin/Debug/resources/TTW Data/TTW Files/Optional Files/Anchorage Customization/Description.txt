@@ -1,0 +1,2 @@
+In BETA.
+Implements a requisition system in Operation Anchorage allowing players to pick their own gear, including weapon mods, special ammos, and even power armor!
