@@ -1,0 +1,3 @@
+Requires all 4 Courier's Stash Packs to be enabled.
+
+Gives the player a menu upon completing character generation that allows them to pick which Stash Packs they would like to receive.
