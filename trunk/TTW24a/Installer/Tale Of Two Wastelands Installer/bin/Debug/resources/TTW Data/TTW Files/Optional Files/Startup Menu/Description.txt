@@ -1,0 +1,2 @@
+Allows the player to start in either the Capital Wasteland (Fallout 3) or in the Mojave Wasteland (Fallout New Vegas).
+A menu is presented to the player when they start a new game.
