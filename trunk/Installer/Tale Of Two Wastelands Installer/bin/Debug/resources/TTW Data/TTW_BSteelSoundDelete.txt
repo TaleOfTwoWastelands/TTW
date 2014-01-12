@@ -1,6 +1,0 @@
-sound\fx\obj\obj_metroride_2d.wav
-sound\fx\wpn\incinerator\wpn_incinerator_fire_3d_lpm.wav
-sound\fx\wpn\incinerator\wpn_incinerator_idle_lpm.wav
-sound\fx\wpn\incinerator\wpn_incinerator_jam.wav
-sound\fx\wpn\teslacannon\wpn_teslacannon_jam.wav
-sound\fx\wpn\teslacannon\wpn_teslacannon_idle_lp.wav

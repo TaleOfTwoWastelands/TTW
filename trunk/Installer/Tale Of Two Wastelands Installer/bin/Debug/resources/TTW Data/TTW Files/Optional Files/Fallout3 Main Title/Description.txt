@@ -1,1 +1,0 @@
-When loading, Fallout: New Vegas plays the main theme from Fallout 3 instead of the one from Fallout: New Vegas.

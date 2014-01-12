@@ -1,6 +1,0 @@
-sound\fx\ui\pipboy\radiation\ui_pipboy_radiation_test_lp.wav
-sound\fx\ui\popup\ui_popup_experienceup.wav
-sound\fx\ui\popup\ui_popup_questcomplete.wav
-sound\fx\ui\popup\ui_popup_questnew.wav
-sound\fx\ui\popup\ui_popup_questupdate.wav
-sound\fx\ui\ui_karma_down.wav
