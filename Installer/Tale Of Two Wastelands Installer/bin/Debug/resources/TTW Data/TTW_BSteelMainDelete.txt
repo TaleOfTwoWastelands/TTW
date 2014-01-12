@@ -31,6 +31,8 @@ meshes\dlc03\architecture\crawler\exterior\dlc03crawlertowerlud01_lod.nif
 meshes\dlc03\architecture\crawler\exterior\dlc03pipelrgend01.nif
 meshes\dlc03\architecture\crawler\exterior\dlc03pipelrgend02.nif
 meshes\dlc03\architecture\military base\dlc03abhelipad01_lod.nif
+meshes\dlc03\architecture\stage\dlc03stage.nif
+meshes\dlc03\architecture\stage\dlc03stagecart.nif
 meshes\dlc03\armor\apa\lefthand.nif
 meshes\dlc03\armor\apa\righthand.nif
 meshes\dlc03\armor\headgear\wig\wig.egm

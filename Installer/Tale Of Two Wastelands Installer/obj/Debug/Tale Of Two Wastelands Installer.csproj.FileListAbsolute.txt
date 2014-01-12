@@ -27,3 +27,12 @@ C:\Users\PPECUser19.PPEC\Google Drive\TTW\Installer Source\Tale Of Two Wasteland
 C:\Users\PPECUser19.PPEC\Google Drive\TTW\Installer Source\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.frm_Main.resources
 C:\Users\PPECUser19.PPEC\Google Drive\TTW\Installer Source\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.Properties.Resources.resources
 C:\Users\PPECUser19.PPEC\Google Drive\TTW\Installer Source\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.csproj.GenerateResource.Cache
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe.config
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.exe
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.pdb
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.pdb
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.csprojResolveAssemblyReference.cache
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.frm_Main.resources
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.Properties.Resources.resources
+D:\System\Users\Conner\Documents\TTW\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.csproj.GenerateResource.Cache

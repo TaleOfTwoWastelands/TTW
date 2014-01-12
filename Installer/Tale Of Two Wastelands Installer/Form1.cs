@@ -537,8 +537,8 @@ namespace Tale_Of_Two_Wastelands_Installer
             {
                 WriteLog("Building FOMODs.");
                 bgw_Install.ReportProgress(0, "Building FOMODs...\n\tThis can take some time.");
-                BuildFOMOD(dirTTWMain, dirTTW + "TaleOfTwoWastelands_233_Main.fomod");
-                BuildFOMOD(dirTTWOptional, dirTTW + "TaleOfTwoWastelands_233_Options.fomod");
+                BuildFOMOD(dirTTWMain, dirTTW + "TaleOfTwoWastelands_234_Main.fomod");
+                BuildFOMOD(dirTTWOptional, dirTTW + "TaleOfTwoWastelands_234_Options.fomod");
                 WriteLog("Done.");
                 bgw_Install.ReportProgress(0, "FOMODs built.");
             }
@@ -1006,30 +1006,29 @@ namespace Tale_Of_Two_Wastelands_Installer
                     }
                 }
 
-                using (StreamReader typeFile = new StreamReader(dirAssets + "TTW Data\\TTW_VoiceTypes.txt"))
+                WriteLog("Renaming voice types.");
+
+                foreach (string folder in Directory.EnumerateDirectories(dirTemp + "sound\\voice\\", "*", SearchOption.TopDirectoryOnly).ToArray<String>())
                 {
-                    string[] line;
 
-                    WriteLog("Renaming voice types.");
-
-                    do
+                    using (StreamReader typeFile = new StreamReader(dirAssets + "TTW Data\\TTW_VoiceTypes.txt"))
                     {
-                        line = typeFile.ReadLine().Split(',');
+                        string[] line;
 
-                        //validate input, exactlly 2 inputs
-
-                        if (Directory.Exists(dirTemp + "sound\\voice\\fallout3.esm\\" + line[0]))
+                        do
                         {
-                            Directory.Move(dirTemp + "sound\\voice\\fallout3.esm\\" + line[0], dirTemp + "sound\\voice\\fallout3.esm\\" + line[1]);
-                        }
+                            line = typeFile.ReadLine().Split(',');
 
-                        if (Directory.Exists(dirTemp + "sound\\voice\\falloutnv.esm\\" + line[0]))
-                        {
-                            Directory.Move(dirTemp + "sound\\voice\\falloutnv.esm\\" + line[0], dirTemp + "sound\\voice\\falloutnv.esm\\" + line[1]);
+                            //validate input, exactlly 2 inputs
+                            if (Directory.Exists(folder + "\\" + line[0]))
+                            {
+                                Directory.Move(folder + "\\" + line[0], folder + "\\" + line[1]);
+                            }
                         }
+                        while (!typeFile.EndOfStream);
                     }
-                    while (!typeFile.EndOfStream);
                 }
+
                 bgw_Install.ReportProgress(0, "\tDone");
             }
 
