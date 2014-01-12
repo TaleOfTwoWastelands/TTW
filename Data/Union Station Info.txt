@@ -1,3 +1,0 @@
-This is the completed work so far. the WIPGrib file has all of the extra work that was added in the temp file, including the work on the start quest.
-
-The areas it adds are not navmeshed as of yet, so that will still need to be done, as well as completion of the quest, which can easily be done once it's all merged.
