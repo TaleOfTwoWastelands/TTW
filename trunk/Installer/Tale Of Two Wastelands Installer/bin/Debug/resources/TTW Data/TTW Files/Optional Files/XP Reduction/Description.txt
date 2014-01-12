@@ -1,0 +1,1 @@
+Slowly reduces XP gain. Early levels have no XP reduction. By level 50 XP Requirements will have doubled.
