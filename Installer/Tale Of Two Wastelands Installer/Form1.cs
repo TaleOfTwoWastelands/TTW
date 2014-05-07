@@ -37,14 +37,16 @@ namespace Tale_Of_Two_Wastelands_Installer
         private void frm_Main_Load(object sender, EventArgs e)
         {
             //Create TTW log directory
+            #region MakeTTWLog
             if (!Directory.Exists(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands"))
             {
                 Directory.CreateDirectory(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands");
-            }
+            } 
+            #endregion
 
-            //Clear and open TTW log file
-            File.WriteAllText(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands\\Install Log.txt", "");
-            logFile = File.AppendText(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands\\Install Log.txt");
+            //Create and open TTW log file
+            File.WriteAllText(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands\\Install Log " + System.DateTime.Now.ToString("MM_dd_yyyy - HH_mm_ss") + ".txt", "");
+            logFile = File.AppendText(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands\\Install Log " + System.DateTime.Now.ToString("MM_dd_yyyy - HH_mm_ss") + ".txt");
             logFile.AutoFlush = true;
 
             //read processor type
@@ -998,7 +1000,9 @@ namespace Tale_Of_Two_Wastelands_Installer
                             if (!Directory.Exists(Path.GetDirectoryName(dirTemp + line.Replace("fallout3.esm", "falloutnv.esm"))))
                                 Directory.CreateDirectory(Path.GetDirectoryName(dirTemp + line.Replace("fallout3.esm", "falloutnv.esm")));
                             if (File.Exists(dirTemp + line))
+                            {
                                 File.Move(dirTemp + line, dirTemp + line.Replace("fallout3.esm", "falloutnv.esm"));
+                            }
                             else
                                 WriteLog("File Not Found:\t" + line);
                         }
