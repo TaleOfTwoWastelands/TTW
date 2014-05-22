@@ -187,6 +187,15 @@ meshes\dlc05\creatures\alien\sneakbackward.kf
 meshes\dlc05\creatures\alien\sneakfastforward.kf
 meshes\dlc05\creatures\alien\sneakforwardwalk.kf
 meshes\dlc05\creatures\alien\sneakmtidle.kf
+meshes\dlc05\creatures\alien\specialanims\1hpaim.kf
+meshes\dlc05\creatures\alien\specialanims\1hpequip.kf
+meshes\dlc05\creatures\alien\specialanims\1hpholster.kf
+meshes\dlc05\creatures\alien\specialanims\1hpunequip.kf
+meshes\dlc05\creatures\alien\specialanims\2hraim.kf
+meshes\dlc05\creatures\alien\specialanims\2hrequip.kf
+meshes\dlc05\creatures\alien\specialanims\2hrholster.kf
+meshes\dlc05\creatures\alien\specialanims\2hrunequip.kf
+meshes\dlc05\creatures\alien\specialanims\mtidle.kf
 meshes\dlc05\creatures\combatdroid\idleanims\specialidle_deactivateloop.kf
 meshes\dlc05\creatures\combatdroid\idleanims\specialidle_getupfacedown.kf
 meshes\dlc05\creatures\combatdroid\idleanims\specialidle_getupfaceup.kf
@@ -367,7 +376,6 @@ meshes\dlc05\clutter\trash\dlc05trashpile06.nif
 meshes\dlc05\creatures\alien\1hpequip.kf
 meshes\dlc05\creatures\alien\1hpholster.kf
 meshes\dlc05\creatures\alien\1hpunequip.kf
-meshes\dlc05\creatures\alien\skeleton.nif
 meshes\dlc05\dungeons\mb\room\dlc05mbrmcorin01.nif
 meshes\dlc05\dungeons\mb\room\dlc05mbrmcorin02.nif
 meshes\dlc05\dungeons\mb\room\dlc05mbrmcorinexsml01.nif
