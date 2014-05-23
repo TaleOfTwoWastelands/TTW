@@ -1,0 +1,5 @@
+Very early beta, needs testing, use at your own risk.
+
+Implements reputation into factions in the Capital Wasteland.
+
+Will be integrated into TTW, but is currently being tested.
