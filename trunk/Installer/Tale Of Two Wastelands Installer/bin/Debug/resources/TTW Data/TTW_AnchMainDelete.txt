@@ -139,6 +139,7 @@ meshes\dlcanch\effects\dlcanchsnowmeshtube01.nif
 meshes\dlcanch\interface\hud\dlcanchgaussscope01.nif
 meshes\dlcanch\projectiles\dlcanchgaussprojectile.nif
 meshes\dlcanch\sky\sky planes\dlcanchskyplaneoverheaddome.nif
+meshes\dlcanch\weapons\1handminedrop\dlcanchminefragstatic.nif
 meshes\markerxblue.nif
 meshes\markerxgreen.nif
 meshes\markerxheadingblack.nif

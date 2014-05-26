@@ -36,11 +36,13 @@ meshes\dlc03\architecture\stage\dlc03stagecart.nif
 meshes\dlc03\armor\apa\lefthand.nif
 meshes\dlc03\armor\apa\righthand.nif
 meshes\dlc03\armor\headgear\wig\wig.egm
+meshes\dlc03\clutter\scientistlab\dlc03teslacoil.nif
 meshes\dlc03\clutter\traffic lights\dlc03streetcamera01.nif
 meshes\dlc03\clutter\traffic lights\dlc03streetlight01.nif
 meshes\dlc03\clutter\traffic lights\dlc03streetlight02.nif
 meshes\dlc03\clutter\traffic lights\dlc03streettraffic01.nif
 meshes\dlc03\clutter\traffic lights\dlc03streettraffic02.nif
+meshes\dlc03\clutter\watercrate\dlc03waterbarrel.nif
 meshes\dlc03\creatures\smbonecrusher\idleanims\specialidle_bombpat.kf
 meshes\dlc03\creatures\smbonecrusher\idleanims\specialidle_fierce.kf
 meshes\dlc03\creatures\smbonecrusher\idleanims\specialidle_getupfacedown.kf

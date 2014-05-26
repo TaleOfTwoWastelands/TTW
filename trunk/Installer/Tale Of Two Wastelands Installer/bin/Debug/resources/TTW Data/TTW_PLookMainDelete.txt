@@ -68,6 +68,8 @@ meshes\dlc04\clutter\boardwalk\dlc04streetlitteredge01.nif
 meshes\dlc04\clutter\boardwalk\dlc04streetlitteredge02.nif
 meshes\dlc04\clutter\boardwalk\dlc04streetlitteredge03.nif
 meshes\dlc04\clutter\dolltrees\dlc04hangingdoll03x256.nif
+meshes\dlc04\clutter\coffin\dlc04coffin01open.nif
+meshes\dlc04\clutter\coffin\dlc04coffin01.nif
 meshes\dlc04\creatures\hillfolk1\idleanims\dlc04hillfolk1danceb.kf
 meshes\dlc04\creatures\hillfolk1\idleanims\dlc04hillfolk1danced.kf
 meshes\dlc04\creatures\hillfolk1\idleanims\dlc04hillfolk1dancee.kf
