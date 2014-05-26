@@ -32,12 +32,14 @@ meshes\characters\_male\idleanims\dlc05wallfrontentry.kf
 meshes\characters\_male\idleanims\dlc05wallfrontexit.kf
 meshes\characters\_male\idleanims\dlc05wallleandynamicidle.kf
 meshes\characters\_male\idleanims\dlc05wallleanspecialidle.kf
+meshes\dlc05\architecture\machines\dlc05machine01.nif
 meshes\dlc05\armor\cowboyoutfit\cowboyhatf.egm
 meshes\dlc05\armor\cowboyoutfit\cowboyhatm.egm
 meshes\dlc05\armor\samuraiarmor\hat.egm
 meshes\dlc05\armor\samuraiarmor\kabuto.egm
 meshes\dlc05\armor\spacesuit\spacehelmet.egm
 meshes\dlc05\clutter\lights\dlc05rclightrounded01off.nif
+meshes\dlc05\clutter\toolsutensils\dlc05alienglobebase01.nif
 meshes\dlc05\creatures\abomination\idleanims\specialidle_analyze.kf
 meshes\dlc05\creatures\abomination\idleanims\specialidle_dozeoff.kf
 meshes\dlc05\creatures\abomination\idleanims\specialidle_getupfacedown.kf
