@@ -968,6 +968,10 @@ namespace Tale_Of_Two_Wastelands_Installer
             bgw_Install.ReportProgress(0, "Building " + outBSA + "...");
             bgw_Install.ReportProgress(0, "\tExtracting " + inBSA + "...");
 
+            WriteLog("Building " + outBSA);
+
+            WriteLog(dirFO3 + "Data\\" + inBSA + " - " + GetChecksum(dirFO3 + "Data\\" + inBSA));
+
             ExtractBSA(dirFO3 + "Data\\" + inBSA, dirTemp);
 
             bgw_Install.ReportProgress(0, "\tDone");
@@ -1039,6 +1043,8 @@ namespace Tale_Of_Two_Wastelands_Installer
             bgw_Install.ReportProgress(0, "\tCompressing " + outBSA + "...");
 
             BuildBSA(dirTemp, dirTTWMain + outBSA);
+
+            WriteLog(dirTTWMain + outBSA + " - " + GetChecksum(dirTTWMain + outBSA));
 
             bgw_Install.ReportProgress(0, "\tDone");
             bgw_Install.ReportProgress(0, "Done\n");

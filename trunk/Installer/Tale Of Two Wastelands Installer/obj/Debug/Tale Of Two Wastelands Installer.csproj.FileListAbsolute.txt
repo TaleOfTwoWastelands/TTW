@@ -45,3 +45,12 @@ D:\System\Users\Conner\Documents\TTW\branches\Installer Update\Tale Of Two Waste
 D:\System\Users\Conner\Documents\TTW\branches\Installer Update\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.frm_Main.resources
 D:\System\Users\Conner\Documents\TTW\branches\Installer Update\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.Properties.Resources.resources
 D:\System\Users\Conner\Documents\TTW\branches\Installer Update\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.csproj.GenerateResource.Cache
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe.config
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.exe
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.pdb
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.pdb
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.csprojResolveAssemblyReference.cache
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.frm_Main.resources
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.Properties.Resources.resources
+D:\System\Users\Conner\Documents\TTW\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.csproj.GenerateResource.Cache
