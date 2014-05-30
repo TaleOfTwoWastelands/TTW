@@ -37,6 +37,12 @@
     <ApplicationIcon>Installer_Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\Visual Studio 2013\Projects\BSDiff\trunk\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Logos.Utility">
+      <HintPath>..\..\..\..\Visual Studio 2013\Projects\BSDiff\trunk\lib\Logos.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinaryPatchUtility.cs" />
+    <Compile Include="BSADiff.cs" />
+    <Compile Include="BSAOpt.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -37,12 +37,10 @@ namespace Tale_Of_Two_Wastelands_Installer
         private void frm_Main_Load(object sender, EventArgs e)
         {
             //Create TTW log directory
-            #region MakeTTWLog
             if (!Directory.Exists(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands"))
             {
                 Directory.CreateDirectory(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands");
             } 
-            #endregion
 
             //Create and open TTW log file
             File.WriteAllText(System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\my games\\TaleOfTwoWastelands\\Install Log " + System.DateTime.Now.ToString("MM_dd_yyyy - HH_mm_ss") + ".txt", "");
@@ -267,7 +265,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Fallout - Misc.bsa", "Fallout3 - Misc.bsa", "TTW_MiscDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Misc.bsa", dirTTWMain + "Fallout3 - Misc.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Misc", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Fallout3 - Meshes.bsa"))
@@ -277,7 +275,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Fallout - Meshes.bsa", "Fallout3 - Meshes.bsa", "TTW_MeshesDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Meshes.bsa", dirTTWMain + "Fallout3 - Meshes.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Meshes", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Fallout3 - Textures.bsa"))
@@ -287,7 +285,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Fallout - Textures.bsa", "Fallout3 - Textures.bsa", "TTW_TexturesDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Textures.bsa", dirTTWMain + "Fallout3 - Textures.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Textures", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Fallout3 - Sound.bsa"))
@@ -297,7 +295,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Fallout - Sound.bsa", "Fallout3 - Sound.bsa", "TTW_SoundDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Sound.bsa", dirTTWMain + "Fallout3 - Sound.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Sound", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Fallout3 - MenuVoices.bsa"))
@@ -307,7 +305,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Fallout - MenuVoices.bsa", "Fallout3 - MenuVoices.bsa", "", true, "TTW_MenuVoicesRename.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - MenuVoices.bsa", dirTTWMain + "Fallout3 - MenuVoices.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - MenuVoices", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Fallout3 - Voices.bsa"))
@@ -317,7 +315,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Fallout - Voices.bsa", "Fallout3 - Voices.bsa", "", true, "TTW_VoicesRename.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Voices.bsa", dirTTWMain + "Fallout3 - Voices.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Voices", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Anchorage - Main.bsa"))
@@ -327,7 +325,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Anchorage - Main.bsa", "Anchorage - Main.bsa", "TTW_AnchMainDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Anchorage - Main.bsa", dirTTWMain + "Anchorage - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Anchorage - Main.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Anchorage - Sounds.bsa"))
@@ -337,7 +335,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Anchorage - Sounds.bsa", "Anchorage - Sounds.bsa");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Anchorage - Sounds.bsa", dirTTWMain + "Anchorage - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Anchorage - Sounds.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "ThePitt - Main.bsa"))
@@ -347,7 +345,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("ThePitt - Main.bsa", "ThePitt - Main.bsa", "TTW_PittMainDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\ThePitt - Main.bsa", dirTTWMain + "ThePitt - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\ThePitt - Main.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "ThePitt - Sounds.bsa"))
@@ -357,7 +355,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("ThePitt - Sounds.bsa", "ThePitt - Sounds.bsa", "TTW_PittSoundDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\ThePitt - Sounds.bsa", dirTTWMain + "ThePitt - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\ThePitt - Sounds.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "BrokenSteel - Main.bsa"))
@@ -367,7 +365,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("BrokenSteel - Main.bsa", "BrokenSteel - Main.bsa", "TTW_BSteelMainDelete.txt", true);
+                BSADiff.PatchBSA(dirFO3 + "Data\\BrokenSteel - Main.bsa", dirTTWMain + "BrokenSteel - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\BrokenSteel - Main.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "BrokenSteel - Sounds.bsa"))
@@ -377,7 +375,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("BrokenSteel - Sounds.bsa", "BrokenSteel - Sounds.bsa", "TTW_BSteelSoundDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\BrokenSteel - Sounds.bsa", dirTTWMain + "BrokenSteel - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\BrokenSteel - Sounds.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "PointLookout - Main.bsa"))
@@ -387,7 +385,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("PointLookout - Main.bsa", "PointLookout - Main.bsa", "TTW_PLookMainDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\PointLookout - Main.bsa", dirTTWMain + "PointLookout - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\PointLookout - Main.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "PointLookout - Sounds.bsa"))
@@ -397,7 +395,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("PointLookout - Sounds.bsa", "PointLookout - Sounds.bsa");
+                BSADiff.PatchBSA(dirFO3 + "Data\\PointLookout - Sounds.bsa", dirTTWMain + "PointLookout - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\PointLookout - Sounds.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Zeta - Main.bsa"))
@@ -407,7 +405,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Zeta - Main.bsa", "Zeta - Main.bsa", "TTW_ZetaMainDelete.txt");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Zeta - Main.bsa", dirTTWMain + "Zeta - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Zeta - Main.bsa", sysArch);
             }
 
             if (File.Exists(dirTTWMain + "Zeta - Sounds.bsa"))
@@ -417,7 +415,7 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
             else
             {
-                CleanFO3BSA("Zeta - Sounds.bsa", "Zeta - Sounds.bsa");
+                BSADiff.PatchBSA(dirFO3 + "Data\\Zeta - Sounds.bsa", dirTTWMain + "Zeta - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Zeta - Sounds.bsa", sysArch);
             }
 
             if (!File.Exists(dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa"))
@@ -425,9 +423,9 @@ namespace Tale_Of_Two_Wastelands_Installer
                 
                 bgw_Install.ReportProgress(0, "Building optional TaleOfTwoWastelands - SFX.bsa...");
 
-                ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\songs\\", dirTTWMain + "sound\\songs\\");
+                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\songs\\", dirTTWMain + "sound\\songs\\", sysArch);
 
-                ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\fx\\ui\\", dirTemp + "sound\\fx\\ui\\");
+                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\fx\\ui\\", dirTemp + "sound\\fx\\ui\\", sysArch);
 
                 using (StreamReader copyFile = new StreamReader(dirAssets + "TTW Data\\TTW_SFXCopy.txt"))
                 {
@@ -443,7 +441,7 @@ namespace Tale_Of_Two_Wastelands_Installer
                     }
                     while (!copyFile.EndOfStream);
 
-                    BuildBSA(dirTemp + "SFXBSA", dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa");
+                    BSAOpt.BuildBSA(dirTemp + "SFXBSA", dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa", sysArch);
 
                     Directory.Delete(dirTemp, true);
                     Directory.CreateDirectory(dirTemp);
@@ -455,10 +453,10 @@ namespace Tale_Of_Two_Wastelands_Installer
             if (!File.Exists(dirTTWOptional + "Fallout3 Player Voice\\TaleOfTwoWastelands - PlayerVoice.bsa"))
             {
 
-                ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicemale\\");
-                ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicefemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicefemale\\");
+                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicemale\\", sysArch);
+                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicefemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicefemale\\", sysArch);
 
-                BuildBSA(dirTemp + "PlayerVoice\\", dirTTWOptional + "Fallout3 Player Voice\\TaleOfTwoWastelands - PlayerVoice.bsa");
+                BSAOpt.BuildBSA(dirTemp + "PlayerVoice\\", dirTTWOptional + "Fallout3 Player Voice\\TaleOfTwoWastelands - PlayerVoice.bsa", sysArch);
 
             }
 
@@ -875,21 +873,6 @@ namespace Tale_Of_Two_Wastelands_Installer
             return bFileCheck;
         }
 
-        public void BSAOpt(string inArg, string outArg)
-        {
-            System.Diagnostics.Process bsaOpt = new System.Diagnostics.Process();
-
-            bsaOpt.StartInfo.FileName = dirAssets + "\\BSAOpt\\BSAOpt x" + sysArch + ".exe";
-            bsaOpt.StartInfo.Arguments = " -deployment -game fo -compress 10 -criticals \"" + inArg + "\" \"" + outArg + "\"";
-            bsaOpt.StartInfo.UseShellExecute = false;
-            bsaOpt.StartInfo.CreateNoWindow = true;
-            bsaOpt.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            bsaOpt.StartInfo.RedirectStandardOutput = true;
-            bsaOpt.Start();
-            string log = bsaOpt.StandardOutput.ReadToEnd();
-            bsaOpt.Close();
-        }
-
         public void DeleteList(string cleanFolder, string listFile)
         {
             WriteLog("Cleaning (" + Path.GetFileName(listFile) + ")...");
@@ -910,22 +893,6 @@ namespace Tale_Of_Two_Wastelands_Installer
 
             }
             while (!streamList.EndOfStream);
-        }
-
-        public void BuildBSA(string inDirectory, string outFile)
-        {
-            WriteLog("Building " + outFile + "...");
-            BSAOpt(inDirectory, outFile);
-            Directory.Delete(inDirectory, true);
-            Directory.CreateDirectory(inDirectory);
-            WriteLog("Done.");
-        }
-
-        public void ExtractBSA(string inBSA, string outDir)
-        {
-            WriteLog("Extracting " + inBSA + "...");
-            BSAOpt(inBSA, outDir);
-            WriteLog("Done.");
         }
 
         public void BuildFOMOD(string inDir, string outFile)
@@ -972,7 +939,7 @@ namespace Tale_Of_Two_Wastelands_Installer
 
             WriteLog(dirFO3 + "Data\\" + inBSA + " - " + GetChecksum(dirFO3 + "Data\\" + inBSA));
 
-            ExtractBSA(dirFO3 + "Data\\" + inBSA, dirTemp);
+            BSAOpt.ExtractBSA(dirFO3 + "Data\\" + inBSA, dirTemp, sysArch);
 
             bgw_Install.ReportProgress(0, "\tDone");
 
@@ -1042,7 +1009,7 @@ namespace Tale_Of_Two_Wastelands_Installer
 
             bgw_Install.ReportProgress(0, "\tCompressing " + outBSA + "...");
 
-            BuildBSA(dirTemp, dirTTWMain + outBSA);
+            BSAOpt.BuildBSA(dirTemp, dirTTWMain + outBSA, sysArch);
 
             WriteLog(dirTTWMain + outBSA + " - " + GetChecksum(dirTTWMain + outBSA));
 
