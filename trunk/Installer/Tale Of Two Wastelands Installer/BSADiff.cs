@@ -231,6 +231,8 @@ namespace Tale_Of_Two_Wastelands_Installer
                 }
             }
 
+            BSAOpt.BuildBSA(BSADir, newBSA, sysArch);
+
             return errorLog;
         }
 
