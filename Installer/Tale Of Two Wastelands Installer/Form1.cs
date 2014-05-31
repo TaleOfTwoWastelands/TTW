@@ -243,6 +243,8 @@ namespace Tale_Of_Two_Wastelands_Installer
             dirTTWMain = dirTTW + "Main Files\\";
             dirTTWOptional = dirTTW + "Optional Files\\";
 
+            DialogResult buildResult;
+
             if (CheckFiles())
             {
                 WriteLog("All files found.");
@@ -258,165 +260,133 @@ namespace Tale_Of_Two_Wastelands_Installer
             WriteLog("Creating FOMOD foundation.");
             CopyFolder(dirAssets + "TTW Data\\TTW Files\\", dirTTW);
 
-            if (File.Exists(dirTTWMain + "Fallout3 - Misc.bsa"))
+            do
             {
-                WriteLog("Fallout3 - Misc.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Fallout3 - Misc.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Fallout - Meshes", "Fallout3 - Meshes");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Misc.bsa", dirTTWMain + "Fallout3 - Misc.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Misc", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Fallout3 - Meshes.bsa"))
+            do
             {
-                WriteLog("Fallout3 - Meshes.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Fallout3 - Meshes.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Fallout - Misc", "Fallout3 - Misc");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Meshes.bsa", dirTTWMain + "Fallout3 - Meshes.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Meshes", sysArch);
-            }
+            while(buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Fallout3 - Textures.bsa"))
+            do
             {
-                WriteLog("Fallout3 - Textures.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Fallout3 - Textures.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Fallout - Sound", "Fallout3 - Sound");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Textures.bsa", dirTTWMain + "Fallout3 - Textures.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Textures", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Fallout3 - Sound.bsa"))
+            do
             {
-                WriteLog("Fallout3 - Sound.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Fallout3 - Sound.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Fallout - Textures", "Fallout3 - Textures");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Sound.bsa", dirTTWMain + "Fallout3 - Sound.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Sound", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Fallout3 - MenuVoices.bsa"))
+            do
             {
-                WriteLog("Fallout3 - MenuVoices.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Fallout3 - MenuVoices.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Fallout - MenuVoices", "Fallout3 - MenuVoices");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - MenuVoices.bsa", dirTTWMain + "Fallout3 - MenuVoices.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - MenuVoices", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Fallout3 - Voices.bsa"))
+            do
             {
-                WriteLog("Fallout3 - Voices.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Fallout3 - Voices.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Fallout - Voices", "Fallout3 - Voices");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Fallout - Voices.bsa", dirTTWMain + "Fallout3 - Voices.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Fallout3 - Voices", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Anchorage - Main.bsa"))
+            do
             {
-                WriteLog("Anchorage - Main.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Anchorage - Main.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Anchorage - Main", "Anchorage - Main");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Anchorage - Main.bsa", dirTTWMain + "Anchorage - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Anchorage - Main.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Anchorage - Sounds.bsa"))
+            do
             {
-                WriteLog("Anchorage - Sounds.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Anchorage - Sounds.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Anchorage - Sounds", "Anchorage - Sounds");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Anchorage - Sounds.bsa", dirTTWMain + "Anchorage - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Anchorage - Sounds.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "ThePitt - Main.bsa"))
+            do
             {
-                WriteLog("ThePitt - Main.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "ThePitt - Main.bsa has already been built, moving on.");
+                buildResult = BuildBSA("ThePitt - Main", "ThePitt - Main");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\ThePitt - Main.bsa", dirTTWMain + "ThePitt - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\ThePitt - Main.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "ThePitt - Sounds.bsa"))
+            do
             {
-                WriteLog("ThePitt - Sounds.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "ThePitt - Sounds.bsa has already been built, moving on.");
+                buildResult = BuildBSA("ThePitt - Sounds", "ThePitt - Sounds");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\ThePitt - Sounds.bsa", dirTTWMain + "ThePitt - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\ThePitt - Sounds.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "BrokenSteel - Main.bsa"))
+            do
             {
-                WriteLog("BrokenSteel - Main.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "BrokenSteel - Main.bsa has already been built, moving on.");
+                buildResult = BuildBSA("BrokenSteel - Main", "BrokenSteel - Main");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\BrokenSteel - Main.bsa", dirTTWMain + "BrokenSteel - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\BrokenSteel - Main.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "BrokenSteel - Sounds.bsa"))
+            do
             {
-                WriteLog("BrokenSteel - Sounds.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "BrokenSteel - Sounds.bsa has already been built, moving on.");
+                buildResult = BuildBSA("BrokenSteel - Sounds", "BrokenSteel - Sounds");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\BrokenSteel - Sounds.bsa", dirTTWMain + "BrokenSteel - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\BrokenSteel - Sounds.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "PointLookout - Main.bsa"))
+            do
             {
-                WriteLog("PointLookout - Main.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "PointLookout - Main.bsa has already been built, moving on.");
+                buildResult = BuildBSA("PointLookout - Main", "PointLookout - Main");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\PointLookout - Main.bsa", dirTTWMain + "PointLookout - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\PointLookout - Main.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "PointLookout - Sounds.bsa"))
+            do
             {
-                WriteLog("PointLookout - Sounds.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "PointLookout - Sounds.bsa has already been built, moving on.");
+                buildResult = BuildBSA("PointLookout - Sounds", "PointLookout - Sounds");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\PointLookout - Sounds.bsa", dirTTWMain + "PointLookout - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\PointLookout - Sounds.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Zeta - Main.bsa"))
+            do
             {
-                WriteLog("Zeta - Main.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Zeta - Main.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Zeta - Main", "Zeta - Main");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Zeta - Main.bsa", dirTTWMain + "Zeta - Main.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Zeta - Main.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
-            if (File.Exists(dirTTWMain + "Zeta - Sounds.bsa"))
+            do
             {
-                WriteLog("Zeta - Sounds.bsa has already been built, skipping.");
-                bgw_Install.ReportProgress(0, "Zeta - Sounds.bsa has already been built, moving on.");
+                buildResult = BuildBSA("Zeta - Sounds", "Zeta - Sounds");
             }
-            else
-            {
-                BSADiff.PatchBSA(dirFO3 + "Data\\Zeta - Sounds.bsa", dirTTWMain + "Zeta - Sounds.bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\Zeta - Sounds.bsa", sysArch);
-            }
+            while (buildResult == System.Windows.Forms.DialogResult.Retry);
+            if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                return;
 
             if (!File.Exists(dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa"))
             {          
@@ -466,8 +436,6 @@ namespace Tale_Of_Two_Wastelands_Installer
             if (!File.Exists(dirTTWMain + "TaleOfTwoWastelands.bsa"))
                 File.Copy(dirAssets + "TTW Data\\TaleOfTwoWastelands.bsa", dirTTWMain + "TaleOfTwoWastelands.bsa");
 
-            if (!PatchFile("TaleOfTwoWastelands.bsa", false))
-                return;
             if (!PatchFile("Fallout3.esm"))
                 return;
             if (!PatchFile("Anchorage.esm"))
@@ -930,93 +898,62 @@ namespace Tale_Of_Two_Wastelands_Installer
             }
         }
 
-        public bool CleanFO3BSA(string inBSA, string outBSA, string listDelete = "", bool changeVoices = false, string voiceRename = "")
+        public DialogResult BuildBSA(string inBSA, string outBSA)
         {
-            bgw_Install.ReportProgress(0, "Building " + outBSA + "...");
-            bgw_Install.ReportProgress(0, "\tExtracting " + inBSA + "...");
+            List<string> errors = new List<string>();
+            string errorString = "\t";
 
-            WriteLog("Building " + outBSA);
-
-            WriteLog(dirFO3 + "Data\\" + inBSA + " - " + GetChecksum(dirFO3 + "Data\\" + inBSA));
-
-            BSAOpt.ExtractBSA(dirFO3 + "Data\\" + inBSA, dirTemp, sysArch);
-
-            bgw_Install.ReportProgress(0, "\tDone");
-
-            if (listDelete != "")
+            if (File.Exists(dirTTWMain + outBSA + ".bsa"))
             {
-                bgw_Install.ReportProgress(0, "\tDeleting unnecessary files...");
-
-                DeleteList(dirTemp, dirAssets + "TTW Data\\" + listDelete);
-
-                bgw_Install.ReportProgress(0, "\tDone");
+                switch (MessageBox.Show("File already exists. Rebuild?", "File Already Exists", MessageBoxButtons.YesNo))
+                {
+                    case System.Windows.Forms.DialogResult.Yes:
+                        File.Delete(dirTTWMain + outBSA + ".bsa");
+                        WriteLog("Rebuilding " + outBSA);
+                        bgw_Install.ReportProgress(0, "Rebuilding " + outBSA);
+                        break;
+                    case System.Windows.Forms.DialogResult.No:
+                        WriteLog(outBSA + " has already been built. Skipping.");
+                        bgw_Install.ReportProgress(0, outBSA + " has already been built. Skipping.");
+                        return DialogResult.No;
+                }
+            }
+            else
+            {
+                WriteLog("Building " + outBSA);
+                bgw_Install.ReportProgress(0, "Building " + outBSA);
             }
 
-            if (changeVoices)
+            errors = BSADiff.PatchBSA(dirFO3 + "Data\\" + inBSA + ".bsa", dirTTWMain + outBSA + ".bsa", dirTemp, dirAssets + "TTW Data\\TTW Patches\\" + outBSA, sysArch);
+
+            foreach (string error in errors)
             {
-                bgw_Install.ReportProgress(0, "\tUpdating voice files...");
-
-                if (voiceRename != "")
-                {
-                    using (StreamReader voiceFile = new StreamReader(dirAssets + "TTW Data\\" + voiceRename))
-                    {
-                        string line;
-
-                        WriteLog("Changing voice masters.");
-
-                        do
-                        {
-                            line = voiceFile.ReadLine();
-
-                            if (!Directory.Exists(Path.GetDirectoryName(dirTemp + line.Replace("fallout3.esm", "falloutnv.esm"))))
-                                Directory.CreateDirectory(Path.GetDirectoryName(dirTemp + line.Replace("fallout3.esm", "falloutnv.esm")));
-                            if (File.Exists(dirTemp + line))
-                            {
-                                File.Move(dirTemp + line, dirTemp + line.Replace("fallout3.esm", "falloutnv.esm"));
-                            }
-                            else
-                                WriteLog("File Not Found:\t" + line);
-                        }
-                        while (!voiceFile.EndOfStream);
-                    }
-                }
-
-                WriteLog("Renaming voice types.");
-
-                foreach (string folder in Directory.EnumerateDirectories(dirTemp + "sound\\voice\\", "*", SearchOption.TopDirectoryOnly).ToArray<String>())
-                {
-
-                    using (StreamReader typeFile = new StreamReader(dirAssets + "TTW Data\\TTW_VoiceTypes.txt"))
-                    {
-                        string[] line;
-
-                        do
-                        {
-                            line = typeFile.ReadLine().Split(',');
-
-                            //validate input, exactlly 2 inputs
-                            if (Directory.Exists(folder + "\\" + line[0]))
-                            {
-                                Directory.Move(folder + "\\" + line[0], folder + "\\" + line[1]);
-                            }
-                        }
-                        while (!typeFile.EndOfStream);
-                    }
-                }
-
-                bgw_Install.ReportProgress(0, "\tDone");
+                errorString += error + "\n\t";
+                WriteLog(error);
+                bgw_Install.ReportProgress(0, error);
             }
-
-            bgw_Install.ReportProgress(0, "\tCompressing " + outBSA + "...");
-
-            BSAOpt.BuildBSA(dirTemp, dirTTWMain + outBSA, sysArch);
-
-            WriteLog(dirTTWMain + outBSA + " - " + GetChecksum(dirTTWMain + outBSA));
-
-            bgw_Install.ReportProgress(0, "\tDone");
-            bgw_Install.ReportProgress(0, "Done\n");
-            return true;
+            if (errors.Count > 0)
+            {
+                switch (MessageBox.Show("The following errors have occurred:" + errorString, "Error Log", MessageBoxButtons.AbortRetryIgnore))
+                {
+                    case System.Windows.Forms.DialogResult.Abort:   //Quit install
+                        WriteLog("Install Aborted.");
+                        bgw_Install.ReportProgress(0, "Install Aborted.");
+                        return System.Windows.Forms.DialogResult.Abort;
+                    case System.Windows.Forms.DialogResult.Retry:   //Start over from scratch
+                        WriteLog("Retrying build.");
+                        bgw_Install.ReportProgress(0, "Retrying build.");
+                        return System.Windows.Forms.DialogResult.Retry;
+                    case System.Windows.Forms.DialogResult.Ignore:  //Ignore errors and move on
+                        WriteLog("Ignoring errors.");
+                        bgw_Install.ReportProgress(0, "Ignoring errors.");
+                        return System.Windows.Forms.DialogResult.Ignore;
+                }
+            }
+            
+            WriteLog("Build successful.");
+            bgw_Install.ReportProgress(0, "Build successful.");
+            return System.Windows.Forms.DialogResult.OK;
         }
-
     }
 }
