@@ -537,8 +537,8 @@ namespace Tale_Of_Two_Wastelands_Installer
             {
                 WriteLog("Building FOMODs.");
                 bgw_Install.ReportProgress(0, "Building FOMODs...\n\tThis can take some time.");
-                BuildFOMOD(dirTTWMain, dirTTW + "TaleOfTwoWastelands_234_Main.fomod");
-                BuildFOMOD(dirTTWOptional, dirTTW + "TaleOfTwoWastelands_234_Options.fomod");
+                BuildFOMOD(dirTTWMain, dirTTW + "TaleOfTwoWastelands_Main.fomod");
+                BuildFOMOD(dirTTWOptional, dirTTW + "TaleOfTwoWastelands_Options.fomod");
                 WriteLog("Done.");
                 bgw_Install.ReportProgress(0, "FOMODs built.");
             }
