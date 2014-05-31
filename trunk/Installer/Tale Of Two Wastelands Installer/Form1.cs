@@ -239,280 +239,289 @@ namespace Tale_Of_Two_Wastelands_Installer
 
         private void bgw_Install_DoWork(object sender, DoWorkEventArgs e)
         {
-            dirTemp = dirTTW + "TempExtract\\";
-            dirTTWMain = dirTTW + "Main Files\\";
-            dirTTWOptional = dirTTW + "Optional Files\\";
-
-            DialogResult buildResult;
-
-            if (CheckFiles())
+            try
             {
-                WriteLog("All files found.");
-                bgw_Install.ReportProgress(0, "All files found. Proceeding with installation.");
-            }
-            else
-            {
-                WriteLog("Missing files detected. Aborting install.");
-                bgw_Install.ReportProgress(0, "The above files were not found. Make sure your Fallout 3 location is accurate and try again.\nInstallation failed.");
-                return;
-            }
+                dirTemp = dirTTW + "TempExtract\\";
+                dirTTWMain = dirTTW + "Main Files\\";
+                dirTTWOptional = dirTTW + "Optional Files\\";
 
-            WriteLog("Creating FOMOD foundation.");
-            CopyFolder(dirAssets + "TTW Data\\TTW Files\\", dirTTW);
+                DialogResult buildResult;
 
-            do
-            {
-                buildResult = BuildBSA("Fallout - Meshes", "Fallout3 - Meshes");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                if (CheckFiles())
+                {
+                    WriteLog("All files found.");
+                    bgw_Install.ReportProgress(0, "All files found. Proceeding with installation.");
+                }
+                else
+                {
+                    WriteLog("Missing files detected. Aborting install.");
+                    bgw_Install.ReportProgress(0, "The above files were not found. Make sure your Fallout 3 location is accurate and try again.\nInstallation failed.");
+                    return;
+                }
 
-            do
-            {
-                buildResult = BuildBSA("Fallout - Misc", "Fallout3 - Misc");
-            }
-            while(buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                WriteLog("Creating FOMOD foundation.");
+                CopyFolder(dirAssets + "TTW Data\\TTW Files\\", dirTTW);
 
-            do
-            {
-                buildResult = BuildBSA("Fallout - Sound", "Fallout3 - Sound");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Fallout - Meshes", "Fallout3 - Meshes");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("Fallout - Textures", "Fallout3 - Textures");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Fallout - Misc", "Fallout3 - Misc");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("Fallout - MenuVoices", "Fallout3 - MenuVoices");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Fallout - Sound", "Fallout3 - Sound");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("Fallout - Voices", "Fallout3 - Voices");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Fallout - Textures", "Fallout3 - Textures");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("Anchorage - Main", "Anchorage - Main");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Fallout - MenuVoices", "Fallout3 - MenuVoices");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("Anchorage - Sounds", "Anchorage - Sounds");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Fallout - Voices", "Fallout3 - Voices");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("ThePitt - Main", "ThePitt - Main");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Anchorage - Main", "Anchorage - Main");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("ThePitt - Sounds", "ThePitt - Sounds");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("Anchorage - Sounds", "Anchorage - Sounds");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("BrokenSteel - Main", "BrokenSteel - Main");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("ThePitt - Main", "ThePitt - Main");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("BrokenSteel - Sounds", "BrokenSteel - Sounds");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("ThePitt - Sounds", "ThePitt - Sounds");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("PointLookout - Main", "PointLookout - Main");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("BrokenSteel - Main", "BrokenSteel - Main");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("PointLookout - Sounds", "PointLookout - Sounds");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("BrokenSteel - Sounds", "BrokenSteel - Sounds");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("Zeta - Main", "Zeta - Main");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("PointLookout - Main", "PointLookout - Main");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            do
-            {
-                buildResult = BuildBSA("Zeta - Sounds", "Zeta - Sounds");
-            }
-            while (buildResult == System.Windows.Forms.DialogResult.Retry);
-            if (buildResult == System.Windows.Forms.DialogResult.Abort)
-                return;
+                do
+                {
+                    buildResult = BuildBSA("PointLookout - Sounds", "PointLookout - Sounds");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-            if (!File.Exists(dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa"))
-            {          
-                
-                bgw_Install.ReportProgress(0, "Building optional TaleOfTwoWastelands - SFX.bsa...");
+                do
+                {
+                    buildResult = BuildBSA("Zeta - Main", "Zeta - Main");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\songs\\", dirTTWMain + "sound\\songs\\", sysArch);
+                do
+                {
+                    buildResult = BuildBSA("Zeta - Sounds", "Zeta - Sounds");
+                }
+                while (buildResult == System.Windows.Forms.DialogResult.Retry);
+                if (buildResult == System.Windows.Forms.DialogResult.Abort)
+                    return;
 
-                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\fx\\ui\\", dirTemp + "sound\\fx\\ui\\", sysArch);
+                if (!File.Exists(dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa"))
+                {
 
-                using (StreamReader copyFile = new StreamReader(dirAssets + "TTW Data\\TTW_SFXCopy.txt"))
+                    bgw_Install.ReportProgress(0, "Building optional TaleOfTwoWastelands - SFX.bsa...");
+
+                    BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\songs\\", dirTTWMain + "sound\\songs\\", sysArch);
+
+                    BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Sound.bsa\\sound\\fx\\ui\\", dirTemp + "sound\\fx\\ui\\", sysArch);
+
+                    using (StreamReader copyFile = new StreamReader(dirAssets + "TTW Data\\TTW_SFXCopy.txt"))
+                    {
+                        string line;
+
+                        WriteLog("Building TaleOfTwoWastelands - SFX.bsa.");
+                        do
+                        {
+                            line = copyFile.ReadLine();
+                            if (!Directory.Exists(Path.GetDirectoryName(dirTemp + "SFXBSA\\" + line)))
+                                Directory.CreateDirectory(Path.GetDirectoryName(dirTemp + "SFXBSA\\" + line));
+                            File.Move(dirTemp + line, dirTemp + "SFXBSA\\" + line);
+                        }
+                        while (!copyFile.EndOfStream);
+
+                        BSAOpt.BuildBSA(dirTemp + "SFXBSA", dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa", sysArch);
+
+                        Directory.Delete(dirTemp, true);
+                        Directory.CreateDirectory(dirTemp);
+                        bgw_Install.ReportProgress(0, "Done\n");
+                    }
+
+                }
+
+                if (!File.Exists(dirTTWOptional + "Fallout3 Player Voice\\TaleOfTwoWastelands - PlayerVoice.bsa"))
+                {
+
+                    BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicemale\\", sysArch);
+                    BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicefemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicefemale\\", sysArch);
+
+                    BSAOpt.BuildBSA(dirTemp + "PlayerVoice\\", dirTTWOptional + "Fallout3 Player Voice\\TaleOfTwoWastelands - PlayerVoice.bsa", sysArch);
+
+                }
+
+                if (Directory.Exists(dirTemp))
+                    Directory.Delete(dirTemp, true);
+
+                if (!File.Exists(dirTTWMain + "TaleOfTwoWastelands.bsa"))
+                    File.Copy(dirAssets + "TTW Data\\TaleOfTwoWastelands.bsa", dirTTWMain + "TaleOfTwoWastelands.bsa");
+
+                if (!PatchFile("Fallout3.esm"))
+                    return;
+                if (!PatchFile("Anchorage.esm"))
+                    return;
+                if (!PatchFile("ThePitt.esm"))
+                    return;
+                if (!PatchFile("BrokenSteel.esm"))
+                    return;
+                if (!PatchFile("PointLookout.esm"))
+                    return;
+                if (!PatchFile("Zeta.esm"))
+                    return;
+
+                WriteLog("Copying Fallout3 Music");
+                bgw_Install.ReportProgress(0, "Copying Fallout3 music files...");
+                using (StreamReader copyFile = new StreamReader(dirAssets + "TTW Data\\FO3_MusicCopy.txt"))
                 {
                     string line;
-
-                    WriteLog("Building TaleOfTwoWastelands - SFX.bsa.");
                     do
                     {
                         line = copyFile.ReadLine();
-                        if (!Directory.Exists(Path.GetDirectoryName(dirTemp + "SFXBSA\\" + line)))
-                            Directory.CreateDirectory(Path.GetDirectoryName(dirTemp + "SFXBSA\\" + line));
-                        File.Move(dirTemp + line, dirTemp + "SFXBSA\\" + line);
+                        Directory.CreateDirectory(Path.GetDirectoryName(dirTTWMain + line));
+                        if (File.Exists(dirFO3 + "Data\\" + line))
+                            try
+                            {
+                                File.Copy(dirFO3 + "Data\\" + line, dirTTWMain + line, true);
+                            }
+                            catch (System.UnauthorizedAccessException error)
+                            {
+                                WriteLog("ERROR: " + line + " did not copy successfully due to: Unauthorized Access Exception " + error.Source + ".");
+                            }
+                        else
+                            WriteLog("File Not Found:\t" + dirFO3 + "Data\\" + line);
                     }
                     while (!copyFile.EndOfStream);
-
-                    BSAOpt.BuildBSA(dirTemp + "SFXBSA", dirTTWOptional + "Fallout3 Sound Effects\\TaleOfTwoWastelands - SFX.bsa", sysArch);
-
-                    Directory.Delete(dirTemp, true);
-                    Directory.CreateDirectory(dirTemp);
-                    bgw_Install.ReportProgress(0, "Done\n");
                 }
-
-            }
-
-            if (!File.Exists(dirTTWOptional + "Fallout3 Player Voice\\TaleOfTwoWastelands - PlayerVoice.bsa"))
-            {
-
-                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicemale\\", sysArch);
-                BSAOpt.ExtractBSA(dirFO3 + "Data\\Fallout - Voices.bsa\\sound\\voice\\fallout3.esm\\playervoicefemale\\", dirTemp + "PlayerVoice\\sound\\voice\\falloutnv.esm\\playervoicefemale\\", sysArch);
-
-                BSAOpt.BuildBSA(dirTemp + "PlayerVoice\\", dirTTWOptional + "Fallout3 Player Voice\\TaleOfTwoWastelands - PlayerVoice.bsa", sysArch);
-
-            }
-
-            if (Directory.Exists(dirTemp))
-                Directory.Delete(dirTemp, true);
-
-            if (!File.Exists(dirTTWMain + "TaleOfTwoWastelands.bsa"))
-                File.Copy(dirAssets + "TTW Data\\TaleOfTwoWastelands.bsa", dirTTWMain + "TaleOfTwoWastelands.bsa");
-
-            if (!PatchFile("Fallout3.esm"))
-                return;
-            if (!PatchFile("Anchorage.esm"))
-                return;
-            if (!PatchFile("ThePitt.esm"))
-                return;
-            if (!PatchFile("BrokenSteel.esm"))
-                return;
-            if (!PatchFile("PointLookout.esm"))
-                return;
-            if (!PatchFile("Zeta.esm"))
-                return;
-
-            WriteLog("Copying Fallout3 Music");
-            bgw_Install.ReportProgress(0, "Copying Fallout3 music files...");
-            using (StreamReader copyFile = new StreamReader(dirAssets + "TTW Data\\FO3_MusicCopy.txt"))
-            {
-                string line;
-                do
-                {
-                    line = copyFile.ReadLine();
-                    Directory.CreateDirectory(Path.GetDirectoryName(dirTTWMain + line));
-                    if (File.Exists(dirFO3 + "Data\\" + line))
-                        try
-                        {
-                            File.Copy(dirFO3 + "Data\\" + line, dirTTWMain + line, true);
-                        }
-                        catch (System.UnauthorizedAccessException error)
-                        {
-                            WriteLog("ERROR: " + line + " did not copy successfully due to: Unauthorized Access Exception " + error.Source + ".");
-                        }
-                    else
-                        WriteLog("File Not Found:\t" + dirFO3 + "Data\\" + line);
-                }
-                while (!copyFile.EndOfStream);
-            }
-            WriteLog("Done.");
-            bgw_Install.ReportProgress(0,"Done.");
-
-            WriteLog("Copying Fallout3 Video");
-            bgw_Install.ReportProgress(0, "Copying Fallout3 video files...");
-            using (StreamReader copyFile = new StreamReader(dirAssets + "TTW Data\\FO3_VideoCopy.txt"))
-            {
-                string line;
-                do
-                {
-                    line = copyFile.ReadLine();
-                    Directory.CreateDirectory(Path.GetDirectoryName(dirTTWMain + line));
-                    if (File.Exists(dirFO3 + "Data\\" + line))
-                        try
-                        {
-                            File.Copy(dirFO3 + "Data\\" + line, dirTTWMain + line, true);
-                        }
-                        catch (System.UnauthorizedAccessException error)
-                        {
-                            WriteLog("ERROR: " + line + " did not copy successfully due to: Unauthorized Access Exception " + error.Source + ".");
-                        }
-                    else
-                        WriteLog("File Not Found:\t" + dirFO3 + "Data\\" + line);
-                }
-                while (!copyFile.EndOfStream);
-            }
-            WriteLog("Done.");
-            bgw_Install.ReportProgress(0,"Done.");
-
-            if (MessageBox.Show("Tale of Two Wastelands is easiest to install via a mod manager (such as Nexus Mod Manager). Manual installation is possible but not suggested.\n\nWould like the installer to automatically build FOMODs?", "Build FOMODs?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                WriteLog("Building FOMODs.");
-                bgw_Install.ReportProgress(0, "Building FOMODs...\n\tThis can take some time.");
-                BuildFOMOD(dirTTWMain, dirTTW + "TaleOfTwoWastelands_Main.fomod");
-                BuildFOMOD(dirTTWOptional, dirTTW + "TaleOfTwoWastelands_Options.fomod");
                 WriteLog("Done.");
-                bgw_Install.ReportProgress(0, "FOMODs built.");
-            }
+                bgw_Install.ReportProgress(0, "Done.");
 
-            bgw_Install.ReportProgress(0,"Install completed successfully.");
-            MessageBox.Show("Tale of Two Wastelands has been installed successfully.");
+                WriteLog("Copying Fallout3 Video");
+                bgw_Install.ReportProgress(0, "Copying Fallout3 video files...");
+                using (StreamReader copyFile = new StreamReader(dirAssets + "TTW Data\\FO3_VideoCopy.txt"))
+                {
+                    string line;
+                    do
+                    {
+                        line = copyFile.ReadLine();
+                        Directory.CreateDirectory(Path.GetDirectoryName(dirTTWMain + line));
+                        if (File.Exists(dirFO3 + "Data\\" + line))
+                            try
+                            {
+                                File.Copy(dirFO3 + "Data\\" + line, dirTTWMain + line, true);
+                            }
+                            catch (System.UnauthorizedAccessException error)
+                            {
+                                WriteLog("ERROR: " + line + " did not copy successfully due to: Unauthorized Access Exception " + error.Source + ".");
+                            }
+                        else
+                            WriteLog("File Not Found:\t" + dirFO3 + "Data\\" + line);
+                    }
+                    while (!copyFile.EndOfStream);
+                }
+                WriteLog("Done.");
+                bgw_Install.ReportProgress(0, "Done.");
+
+                if (MessageBox.Show("Tale of Two Wastelands is easiest to install via a mod manager (such as Nexus Mod Manager). Manual installation is possible but not suggested.\n\nWould like the installer to automatically build FOMODs?", "Build FOMODs?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    WriteLog("Building FOMODs.");
+                    bgw_Install.ReportProgress(0, "Building FOMODs...\n\tThis can take some time.");
+                    BuildFOMOD(dirTTWMain, dirTTW + "TaleOfTwoWastelands_Main.fomod");
+                    BuildFOMOD(dirTTWOptional, dirTTW + "TaleOfTwoWastelands_Options.fomod");
+                    WriteLog("Done.");
+                    bgw_Install.ReportProgress(0, "FOMODs built.");
+                }
+
+                bgw_Install.ReportProgress(0, "Install completed successfully.");
+                MessageBox.Show("Tale of Two Wastelands has been installed successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unhandled exception has occurred:\n" + ex.Message, "Exception");
+                WriteLog(ex.Message);
+                bgw_Install.ReportProgress(0, ex.Message);
+            }
         }
 
         private void bgw_Install_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -905,7 +914,7 @@ namespace Tale_Of_Two_Wastelands_Installer
 
             if (File.Exists(dirTTWMain + outBSA + ".bsa"))
             {
-                switch (MessageBox.Show("File already exists. Rebuild?", "File Already Exists", MessageBoxButtons.YesNo))
+                switch (MessageBox.Show( outBSA + ".bsa already exists. Rebuild?", "File Already Exists", MessageBoxButtons.YesNo))
                 {
                     case System.Windows.Forms.DialogResult.Yes:
                         File.Delete(dirTTWMain + outBSA + ".bsa");
