@@ -65,3 +65,9 @@ D:\TTW Repos\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wa
 D:\TTW Repos\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.frm_Main.resources
 D:\TTW Repos\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale_Of_Two_Wastelands_Installer.Properties.Resources.resources
 D:\TTW Repos\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.csproj.GenerateResource.Cache
+D:\TTW Repos\trunk\Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe.config
+D:\TTW Repos\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.exe
+D:\TTW Repos\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.pdb
+D:\TTW Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe.config
+D:\TTW Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.exe
+D:\TTW Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.pdb

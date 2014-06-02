@@ -200,9 +200,14 @@ namespace Tale_Of_Two_Wastelands_Installer
                                 BinaryPatchUtility.Apply(input, () => new FileStream(patchDir + "\\" + file + "." + oldChk + "." + newChk + ".diff", FileMode.Open, FileAccess.Read, FileShare.Read), output);
 
                             oldChk = GetChecksum(BSADir + file + ".tmp");
+                            if (oldChk == newChk)
+                            {
+                                File.Delete(BSADir + file);
+                                File.Move(BSADir + file + ".tmp", BSADir + file);
+                            }
+                            else
+                                errorLog.Add("Patching " + file + " has failed - " + oldChk);
 
-                            File.Delete(BSADir + file);
-                            File.Move(BSADir + file + ".tmp", BSADir + file);
                         }
                         else
                         {
