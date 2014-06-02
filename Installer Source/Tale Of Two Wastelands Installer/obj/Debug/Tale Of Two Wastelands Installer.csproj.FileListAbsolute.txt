@@ -71,3 +71,6 @@ D:\TTW Repos\trunk\Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of 
 D:\TTW Installer\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe.config
 D:\TTW Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.exe
 D:\TTW Installer\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.pdb
+D:\TTW Repos\trunk\Installer Source\Tale Of Two Wastelands Installer\bin\Debug\Tale Of Two Wastelands Installer.exe.config
+D:\TTW Repos\trunk\Installer Source\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.exe
+D:\TTW Repos\trunk\Installer Source\Tale Of Two Wastelands Installer\obj\Debug\Tale Of Two Wastelands Installer.pdb
