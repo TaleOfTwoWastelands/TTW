@@ -1,3 +1,0 @@
-Turns all speech challenges that would normally be percentage based into static skill checks like in Fallout: New Vegas.
-
-Will be integrated into TTW, but is currently being tested.
